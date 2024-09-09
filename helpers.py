@@ -1,10 +1,13 @@
 import random
 import string
+import allure
 
 
 class Helpers:
 
+
     @staticmethod
+    @allure.step('Генерируем тело запроса для регистрации курьера')
     def register_new_courier_and_return_login_password():
         # метод генерирует строку, состоящую только из букв нижнего регистра, в качестве параметра передаём длину строки
         def generate_random_string(length):
@@ -25,3 +28,4 @@ class Helpers:
         }
 
         return payload
+

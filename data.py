@@ -7,7 +7,7 @@ class Urls:
 
 
 
-class DataBodies:
+class DataRequestBodies:
 
     CREATED_COURIER = {
         "login": "yuriykhanalaynen",
@@ -31,7 +31,7 @@ class DataBodies:
         "password": "lesnik"
     }
 
-    NON_EXISTEN_COURIER = {
+    NON_EXISTENT_COURIER = {
         "login": "ksushachugunova",
         "password": "kuklakolduna"
     }
@@ -84,4 +84,14 @@ class DataBodies:
         "comment": "UUUUUUUUUUUUUUUU",
         "color": []
     }
+
+
+class DataResponseBodies:
+
+    COURIER_CREATION_SUCCESSFUL = '{"ok":true}'
+    REPEATED_COURIER_CREATION = '{"message": "Этот логин уже используется"}'
+    COURIER_CREATION_WITHOUT_SOMETHING_FIELD = '{"message": "Недостаточно данных для создания учетной записи"}'
+    COURIER_LOGIN_WITHOUT_SOMETHING_FIELD = '{"message":  "Недостаточно данных для входа"}'
+    COURIER_LOGIN_WITH_INVALID_LOGIN_OR_PASSWORD = '{"message": "Учетная запись не найдена"}'
+    NON_EXISTENT_COURIER_LOGIN = '{"message": "Учетная запись не найдена"}'
 
